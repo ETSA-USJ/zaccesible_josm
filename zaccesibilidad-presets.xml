@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<presets xmlns="http://josm.openstreetmap.de/tagging-preset-1.0"
+    author="Carlos Cámara"
+    version="0.1"
+    shortdescription="Presets for tagging Accessibility issues."
+    description="Presets for tagging Accessibility from a mobility perspective used in Zaragoza Accesible project.">
+
+<group name="Zaccesibilidad">
+    <group name="Aceras y cruces de peatones">
+        <item name="Paso de peatones (Ways)" type="way">
+            <key key="source" value="#Zaccesibilidad" />
+            <key key="highway" value="crossing" />
+            <label text="Paso de peatones" />
+            <label text="Más info: http://wiki.openstreetmap.org/wiki/Key:crossing" />
+            <label text="---------------------------" />
+            <label text="Semáforos" />
+            <combo key="crossing" text="¿Cruce con semáforos?" values="traffic_signals, uncontrolled"
+                   display_values="Traffic signals, Uncontrolled" default="" delete_if_empty="true" />
+            <label text="En caso de tener semáforos..." />
+            <check key="traffic_signals:sound" text="¿Semáforos con señal acústica?" default="off"  />
+            <combo key="traffic_signals:sound" text="¿Semáforos con señal acústica?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+            <label text="---------------------------" />
+            <label text="Bicicletas" />
+            <combo key="bicycle" text="¿Cruce de bicicletas?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+            <label text="En caso afirmativo..." />
+            <combo key="segregated" text="¿Bicicletas segregadas?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+            <label text="---------------------------" />
+            <combo key="wheelchair" text="¿Accesible en silla de ruedas?" values="yes, no"
+                   default="" delete_if_empty="true" />
+            <combo key="crossing_ref" text="Tipo de cruce en OSM" values="zebra, tiger, pelican, toucan"
+                   display_values="Zebra, Tiger, Pelican, Toucan" default="" delete_if_empty="true" />
+         </item>
+        <item name="Bordillos (Nodes)" type="node">
+            <key key="source" value="#Zaccesibilidad" />
+            <label text="Discapacidad motora" />
+            <label text="---------------------------" />
+            <combo key="kerb" text="Tipo de bordillo" values="lowered, flush, raised"
+                   display_values="Lowered, Flush, Raised" default="" delete_if_empty="true" />
+            <text key="kerb:height" value="" text="Altura (en m, o especificar unidades). Separar decimales con ." delete_if_empty="true" />
+            <combo key="wheelchair" text="¿Accesible en silla de ruedas?" values="yes, no"
+                   default="" delete_if_empty="true" />
+            <label text="Discapacidad visual" />
+            <label text="---------------------------" />
+            <combo key="tactile_paving" text="¿Pavimento táctil?" values="yes, no, primitive, incorrect"
+                   display_values="Yes, No, Primitive, Incorrect" default="" delete_if_empty="true" />
+        </item>
+        <item name="Aceras (complementando a vial existente -roadway)" type="way" >
+            <key key="source" value="#Zaccesibilidad" />
+            <label text="Este tipo de aceras se usan como complemento a" />
+            <label text="highway=footway/cycleway/path/bridleway/track." />
+            <combo key="sidewalk" text="¿Tiene acera?" values="none, both, left, right"
+                   display_values="Ninguna, Ambos lados, Izquierda, Derecha" default="" delete_if_empty="true"/>
+            <text key="sidewalk:both:width" value="" text="Anchura acera (en metros)" delete_if_empty="true" />
+            <text key="sidewalk:right:width" value="" text="Anchura acera derecha (en metros)" delete_if_empty="true" />
+            <text key="sidewalk:left:width" value="" text="Anchura acera izquierda(en metros)" delete_if_empty="true" />
+            <text key="sidewalk:both:surface" value="" text="Pavimento acera" delete_if_empty="true" />
+            <text key="sidewalk:right:surface" value="" text="Pavimento acera derecha" delete_if_empty="true" />
+            <text key="sidewalk:left:surface" value="" text="Pavimento acera izquierda" delete_if_empty="true" />
+            <combo key="tactile_paving" text="¿Pavimento táctil?" values="yes, no, primitive, incorrect"
+                   display_values="Yes, No, Primitive, Incorrect" default="" delete_if_empty="true" />
+            <combo key="wheelchair" text="¿Accesible en silla de ruedas?" values="yes, no"
+                   default="" delete_if_empty="true" />
+            <combo key="kerb" text="Tipo de bordillo" values="lowered, flush, raised"
+                   display_values="Lowered, Flush, Raised" default="" delete_if_empty="true" />
+        </item>
+        <item name="Aceras independientes" type="way" >
+            <key key="source" value="#Zaccesibilidad" />
+            <key key="highway" value="footway" />
+            <combo key="surface" text="Pavimento acera" values="paved, asphalt, cobblestone, sett, concrete, paving_stones, wood"
+                   display_values="Pavimento genérico, Asfalto, Adoquines, Baldosas, Hormigón, Adoquines (planos), Madera" default="" delete_if_empty="true" />
+            <combo key="tactile_paving" text="¿Pavimento táctil?" values="yes, no, primitive, incorrect"
+                   display_values="Yes, No, Primitive, Incorrect" default="" delete_if_empty="true" />
+            <text key="width" value="" text="Anchura (en metros)" delete_if_empty="true" />
+            <combo key="wheelchair" text="¿Accesible en silla de ruedas?" values="yes, no"
+                   default="" delete_if_empty="true" />
+            <combo key="kerb" text="Tipo de bordillo" values="lowered, flush, raised"
+                   display_values="Lowered, Flush, Raised" default="" delete_if_empty="true" />
+
+        </item>
+    </group>
+    <group name="Escaleras, rampas" >
+        <item name="Escaleras (ways)" type="way">
+            <key key="source" value="#Zaccesibilidad" />
+            <key key="highway" value="steps" />
+            <label text="+info sobre escaleras: http://wiki.openstreetmap.org/wiki/Tag:highway%3Dsteps" />
+            <text key="name" value="" text="Nombre de la escalera (si tiene)" delete_if_empty="true" />
+            <text key="step_count" value="" text="Número de peldaños" delete_if_empty="true" />
+            <text key="width" value="" text="Anchura (en metros)" delete_if_empty="true" />
+            <label text="---------------------------" />
+            <label text="Accesibilidad" />
+            <combo key="ramp:wheelchair" text="¿Tiene rampa para silla de ruedas?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+            <label text="Pasamanos" />
+            <combo key="handrail" text="¿Tiene pasamanos?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+            <label text="(Relativos al sentido de la marcha)" />
+            <combo key="handrail:right" text="¿Pasamanos a la derecha?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+            <combo key="handrail:left" text="¿Pasamanos a la izquierda?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+            <combo key="handrail:center" text="¿Pasamanos en el centro?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+        </item>
+        <item name="Escaleras mecánicas(ways)" type="way">
+            <key key="source" value="#Zaccesibilidad" />
+            <key key="highway" value="steps" />
+            <text key="name" value="" text="Nombre de la escalera (si tiene)" delete_if_empty="true" />
+            <text key="step_count" value="" text="Número de peldaños" delete_if_empty="true" />
+            <text key="width" value="" text="Anchura (en metros)" delete_if_empty="true" />
+            <text key="lanes" value="" text="Número de escaleras en paralelo" delete_if_empty="true" />
+            <combo key="conveying" text="Sentido de la marcha" values="yes, forward, backward, reversible"
+                   display_values="Sin especificar, Adelante, Hacia atrás, Reversible" default="" delete_if_empty="true" />
+            <combo key="tactile_paving" text="¿Pavimento táctil?" values="yes, no"
+                   display_values="Yes, No" default="" delete_if_empty="true" />
+            <combo key="incline" text="¿De subida o bajada?" values="up, down"
+                   display_values="Subida, Bajada" default="" delete_if_empty="true" />
+            <combo key="wheelchair" text="¿Accesible en silla de ruedas?" values="yes, no"
+                   default="" delete_if_empty="true" />
+        </item>
+    </group>
+</group>
+</presets>
