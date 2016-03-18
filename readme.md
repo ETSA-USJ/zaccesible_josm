@@ -6,7 +6,7 @@ Los presets son una ayuda para marcar de forma rápida un conjunto predeterminad
 
 Estas instrucciones dan por supuesto que tenemos JOSM instalado y funcionando en nuestro sistema. Si no es el caso puedes descargarlo desde la [web oficial](http://josm.openstreetmap.de/) y leer [este tutorial de Learn OSM](http://learnosm.org/en/josm/start-josm/).
 
- 1. Colocar el archivo `zaccesibilidad-presets.xml` en el disco duro (podemos clonar el repositorio `git clone XXX` o ir directamente a la zona de descargas y descargarlo desde allí)
+ 1. Colocar el archivo `zaccesibilidad-presets.xml` en el disco duro (podemos clonar el repositorio `git clone git@github.com:ccamara/zaccesible_josm.git` o  descargarlo desde [aquí](https://github.com/ccamara/zaccesible_josm/releases))
  1. Abrir JOSM y acceder a las preferencias (`F12`)
  1. Seleccionar la pestaña `Ajustes para la proyección del mapa y la interpretación de los datos`  ![Screenshot añadir presets](http://learnosm.org/images/en/editing/josm-presets/tagging-presets-menu.png)
  1. Seleccionar la subpestaña `Etiquetas de predefinidos` y hacer clic en el icono `+`
