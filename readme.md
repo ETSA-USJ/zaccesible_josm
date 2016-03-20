@@ -1,4 +1,4 @@
-Conjunto de presets para [JOSM](http://josm.openstreetmap.de/) para etiquetar aspectos con la movilidad desde el punto de vista de la accesibilidad para utilizar en una próxima mapping party "Zaragoza Accesible - #Zaccesible".
+Conjunto de presets para [JOSM](http://josm.openstreetmap.de/) para etiquetar aspectos relacionados con la movilidad desde el punto de vista de la accesibilidad para utilizar en una próxima mapping party "Zaragoza Accesible - #Zaccesible" (fecha y lugares por determinar).
 
 Los presets son una ayuda para marcar de forma rápida un conjunto predeterminado de etiquetas (tags) con sus valores. Si no estás familiarizado con ellos (y con el ahorro de tiempo y de errores que suponen), puedes leer una descripción en [este enlace de Learn OSM](http://learnosm.org/en/josm/josm-presets/)
 
