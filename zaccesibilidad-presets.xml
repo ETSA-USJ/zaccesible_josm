@@ -66,9 +66,9 @@
             <combo key="kerb" text="Tipo de bordillo" values="lowered, flush, raised"
                    display_values="Lowered, Flush, Raised" default="" delete_if_empty="true" />
         </item>
-        <item name="Aceras independientes" type="way" >
+        <item name="Calles peatonales" type="way" >
             <key key="source" value="#Zaccesibilidad" />
-            <key key="highway" value="footway" />
+            <key key="highway" value="pedestrian" />
             <combo key="surface" text="Pavimento acera" values="paved, asphalt, cobblestone, sett, concrete, paving_stones, wood"
                    display_values="Pavimento genérico, Asfalto, Adoquines, Baldosas, Hormigón, Adoquines (planos), Madera" default="" delete_if_empty="true" />
             <combo key="tactile_paving" text="¿Pavimento táctil?" values="yes, no, primitive, incorrect"
