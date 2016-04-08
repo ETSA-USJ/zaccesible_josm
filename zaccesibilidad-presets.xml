@@ -8,11 +8,17 @@
 <group name="Zaccesibilidad">
     <group name="Aceras y cruces de peatones">
         <item name="Paso de peatones (Ways)" type="way">
-            <key key="source" value="#Zaccesibilidad" />
             <key key="highway" value="crossing" />
             <label text="Paso de peatones" />
-            <label text="Más info: http://wiki.openstreetmap.org/wiki/Key:crossing" />
+            <label text="Más info:
+            <link href="http://wiki.openstreetmap.org/wiki/Key:crossing" />
+            <space />
+            <label text="Fuente de datos (Source)" />
             <label text="---------------------------" />
+            <text key="source" text="Source" default="survey" delete_if_empty="true" />
+            <text key="note" text="Note" default="#Zaccesibilidad" delete_if_empty="true" />
+            <text key="source:date" text="Date" default="" delete_if_empty="true" />
+            <space />
             <label text="Semáforos" />
             <combo key="crossing" text="¿Cruce con semáforos?" values="traffic_signals, uncontrolled"
                    display_values="Traffic signals, Uncontrolled" default="" delete_if_empty="true" />
@@ -38,9 +44,14 @@
                    display_values="Lowered, Flush, Raised" default="" delete_if_empty="true" />
          </item>
         <item name="Bordillos (Nodes)" type="node">
-            <key key="source" value="#Zaccesibilidad" />
             <label text="Discapacidad motora" />
+            <space />
+            <label text="Fuente de datos (Source)" />
             <label text="---------------------------" />
+            <text key="source" text="Source" default="survey" delete_if_empty="true" />
+            <text key="note" text="Note" default="#Zaccesibilidad" delete_if_empty="true" />
+            <text key="source:date" text="Date" default="" delete_if_empty="true" />
+            <space />
             <combo key="kerb" text="Tipo de bordillo" values="lowered, flush, raised"
                    display_values="Lowered, Flush, Raised" default="" delete_if_empty="true" />
             <text key="kerb:height" value="" text="Altura (en m, o especificar unidades). Separar decimales con ." delete_if_empty="true" />
@@ -52,9 +63,14 @@
                    display_values="Yes, No, Primitive, Incorrect" default="" delete_if_empty="true" />
         </item>
         <item name="Aceras (complementando a vial existente -roadway)" type="way" >
-            <key key="source" value="#Zaccesibilidad" />
             <label text="Este tipo de aceras se usan como complemento a" />
             <label text="highway=footway/cycleway/path/bridleway/track." />
+            <label text="Fuente de datos (Source)" />
+            <label text="---------------------------" />
+            <text key="source" text="Source" default="survey" delete_if_empty="true" />
+            <text key="note" text="Note" default="#Zaccesibilidad" delete_if_empty="true" />
+            <text key="source:date" text="Date" default="" delete_if_empty="true" />
+            <space />
             <combo key="sidewalk" text="¿Tiene acera?" values="none, both, left, right"
                    display_values="Ninguna, Ambos lados, Izquierda, Derecha" default="" delete_if_empty="true"/>
             <text key="sidewalk:both:width" value="" text="Anchura acera (en metros)" delete_if_empty="true" />
@@ -71,8 +87,13 @@
                    display_values="Lowered, Flush, Raised" default="" delete_if_empty="true" />
         </item>
         <item name="Calles peatonales" type="way" >
-            <key key="source" value="#Zaccesibilidad" />
             <key key="highway" value="pedestrian" />
+            <label text="Fuente de datos (Source)" />
+            <label text="---------------------------" />
+            <text key="source" text="Source" default="survey" delete_if_empty="true" />
+            <text key="note" text="Note" default="#Zaccesibilidad" delete_if_empty="true" />
+            <text key="source:date" text="Date" default="" delete_if_empty="true" />
+            <space />
             <combo key="surface" text="Pavimento acera" values="paved, asphalt, cobblestone, sett, concrete, paving_stones, wood"
                    display_values="Pavimento genérico, Asfalto, Adoquines, Baldosas, Hormigón, Adoquines (planos), Madera" default="" delete_if_empty="true" />
             <combo key="tactile_paving" text="¿Pavimento táctil?" values="yes, no, primitive, incorrect"
@@ -87,9 +108,16 @@
     </group>
     <group name="Escaleras, rampas" >
         <item name="Escaleras (ways)" type="way">
-            <key key="source" value="#Zaccesibilidad" />
             <key key="highway" value="steps" />
             <label text="+info sobre escaleras: http://wiki.openstreetmap.org/wiki/Tag:highway%3Dsteps" />
+            <space />
+            <label text="Fuente de datos (Source)" />
+            <label text="---------------------------" />
+            <text key="source" text="Source" default="survey" delete_if_empty="true" />
+            <text key="note" text="Note" default="#Zaccesibilidad" delete_if_empty="true" />
+            <text key="source:date" text="Date" default="" delete_if_empty="true" />
+            <label text="---------------------------" />
+            <space />
             <text key="name" value="" text="Nombre de la escalera (si tiene)" delete_if_empty="true" />
             <text key="step_count" value="" text="Número de peldaños" delete_if_empty="true" />
             <text key="width" value="" text="Anchura (en metros)" delete_if_empty="true" />
@@ -109,8 +137,14 @@
                    display_values="Yes, No" default="" delete_if_empty="true" />
         </item>
         <item name="Escaleras mecánicas(ways)" type="way">
-            <key key="source" value="#Zaccesibilidad" />
             <key key="highway" value="steps" />
+            <label text="Fuente de datos (Source)" />
+            <label text="---------------------------" />
+            <text key="source" text="Source" default="survey" delete_if_empty="true" />
+            <text key="note" text="Note" default="#Zaccesibilidad" delete_if_empty="true" />
+            <text key="source:date" text="Date" default="" delete_if_empty="true" />
+            <label text="---------------------------" />
+            <space />
             <text key="name" value="" text="Nombre de la escalera (si tiene)" delete_if_empty="true" />
             <text key="step_count" value="" text="Número de peldaños" delete_if_empty="true" />
             <text key="width" value="" text="Anchura (en metros)" delete_if_empty="true" />
