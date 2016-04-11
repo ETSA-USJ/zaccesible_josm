@@ -9,7 +9,8 @@
     <label text="Fuente de datos (Source)" />
     <label text="---------------------------" />
     <text key="source" text="Source" default="survey" delete_if_empty="true" />
-    <text key="note" text="Note" default="Zaccesibilidad" delete_if_empty="true" />
+    <key key="note" value="#Zaccesibilidad" />
+    <!--<text key="note" text="Note" default="Zaccesibilidad" delete_if_empty="true" />  @todo: add default value but let user to modify it. -->
     <text key="source:date" text="Date" default="" delete_if_empty="true" />
     <space />
 </chunk>
